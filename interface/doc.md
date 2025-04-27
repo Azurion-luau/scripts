@@ -82,3 +82,69 @@ Divider:Set(false) -- Whether the divider's visibility is to be set to true or f
 ```lua
 Rayfield:Destroy()
 ```
+## Themes
+```
+Theme Name - ThemeIdentifier
+
+Default - Default
+Amber Glow - AmberGlow
+Amethyst - Amethyst
+Bloom - Bloom
+Dark Blue - DarkBlue
+Green - Green
+Light - Light
+Ocean - Ocean
+Serenity - Serenity
+```
+## Notification
+```lua
+Rayfield:Notify({
+   Title = "Notification Title",
+   Content = "Notification Content",
+   Duration = 6.5,
+   Image = 4483362458,
+})
+```
+
+## Lucide Icon Support
+```lua
+Rayfield:Notify({
+   Title = "Notification Title",
+   Content = "Notification Content",
+   Duration = 6.5,
+   Image = "rewind",
+})
+```
+## Creating a button
+```lua
+local Button = Tab:CreateButton({
+   Name = "Button Example",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+```
+
+## Update a button
+```lua
+Button:Set("Button Example")
+```
+## Create a toggle
+
+```lua
+local Toggle = Tab:CreateToggle({
+   Name = "Toggle Example",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+```
+
+## Update a toggle
+```lua
+Toggle:Set(false)
+```
+
