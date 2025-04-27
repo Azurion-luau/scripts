@@ -2,12 +2,12 @@
 
 ## Loading the Rayfield
 ```lua
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Azurion-luau/scripts/refs/heads/main/interface/gui.lua'))()
+local RayfieldMod = loadstring(game:HttpGet('https://raw.githubusercontent.com/Azurion-luau/scripts/refs/heads/main/interface/gui.lua'))()
 ```
 
 ## Creating Window
 ```lua
-local Window = Rayfield:CreateWindow({
+local Window = RayfieldMod:CreateWindow({
    Name = "Rayfield Example Window",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Rayfield Interface Suite",
@@ -80,7 +80,7 @@ Divider:Set(false) -- Whether the divider's visibility is to be set to true or f
 
 # Destroying the Interface
 ```lua
-Rayfield:Destroy()
+RayfieldMod:Destroy()
 ```
 ## Themes
 ```
