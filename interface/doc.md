@@ -96,6 +96,7 @@ Light - Light
 Ocean - Ocean
 Serenity - Serenity
 ```
+# Interaction
 ## Notification
 ```lua
 Rayfield:Notify({
@@ -229,4 +230,50 @@ Dropdown:Set({"Option 2"}) -- The new selected options
 ## Resseting
 ```lua
 Dropdown:Refresh({"Option 1", "Option 2", "Option 3"}) -- The new list of options available.
+```
+## Creating a keybine
+```lua
+local Keybind = Tab:CreateKeybind({
+   Name = "Keybind Example",
+   CurrentKeybind = "Q",
+   HoldToInteract = false,
+   Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Keybind)
+   -- The function that takes place when the keybind is pressed
+   -- The variable (Keybind) is a boolean for whether the keybind is being held or not (HoldToInteract needs to be true)
+   end,
+})
+```
+
+## Update a keybine
+```lua
+Keybind:Set("RightCtrl") -- Keybind (string)
+```
+
+# Textual elements in Rayfield
+## Creating a Label
+```lua
+local Label = Tab:CreateLabel("Label Example", 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+```
+## Lucide Icon Support
+You can now also use Lucide Icons with Rayfield. To do so, replace the Image Id above 4483362458 with a string value of an icon name in Lucide Icons.
+```lua
+local Label = Tab:CreateLabel("Label Example", "rewind")
+```
+This will set the icon to a rewind symbol from Lucide Icons.
+
+All Lucide Icons Supported Lucide Icons
+
+Credit to Lucide and Latte Softworks
+## Updating a Label
+```lua
+Label:Set("Label Example", 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+```
+## Creating a Paragraph
+```lua
+local Paragraph = Tab:CreateParagraph({Title = "Paragraph Example", Content = "Paragraph Example"})
+```
+## Updating a Paragraph
+```lua
+Paragraph:Set({Title = "Paragraph Example", Content = "Paragraph Example"})
 ```
