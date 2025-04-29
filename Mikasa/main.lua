@@ -22,7 +22,7 @@ end
 
 -- Carrega o GUI e insere o nome correto da place
 local Window = Mikasafield:CreateWindow({
-    Name = "Mikasa | " .. placeName .. " V0.1",
+    Name = "Mikasa | " .. placeName .. "0.9",
     Icon = "github",
     LoadingTitle = "Remade of Realms Hub",
     LoadingSubtitle = "by Azurion",
@@ -83,5 +83,24 @@ BF:CreateButton({
     Callback = function()
         local player = Players.LocalPlayer
         player:Kick("You were detected bypassing.")
+    end,
+})
+BF:CreateButton({
+    Name = "Maru Hub Bypassed!",
+    Callback = function()
+        local player = Players.LocalPlayer
+        player:Kick("You were detected bypassing.")
+    end,
+})
+BF:CreateButton({
+    Name = "W-Azure",
+    Callback = function()
+        --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+getgenv().Team = "Pirates"
+getgenv().FixCrash = false -- Turn it On For Hopping Server, Improve Performance But Silent Aim On Mob And Player
+getgenv().FixCrash2 = false -- Turn it On For Hopping Server, Improve Performance But Will Remove Speed Changer
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
     end,
 })
