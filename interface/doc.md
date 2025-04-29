@@ -1,279 +1,323 @@
-# Rayfield Modded by Azurion
+Here's a cleaner, more professional, and well-structured English rewrite of your Markdown documentation for **MikasaFiel**, improving grammar, formatting, and clarity:
 
-## Loading the Rayfield
+---
+
+# MikasaFiel — A Custom Version of Rayfield UI
+
+## 📦 Loading MikasaFiel
 ```lua
-local Mikasafield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Azurion-luau/scripts/refs/heads/main/interface/gui.lua'))()
+local Mikasafield = loadstring(game:HttpGet("https://raw.githubusercontent.com/Azurion-luau/scripts/refs/heads/main/interface/gui.lua"))()
 ```
 
-## Creating Window
+---
+
+## 🪟 Creating a Window
 ```lua
 local Window = Mikasafield:CreateWindow({
-   Name = "Mikasa | [name here] V0.1",
-   Icon = "github",
+   Name = "Mikasa | [Your Script Name] V0.1",
+   Icon = "github", -- Uses a Lucide icon
    LoadingTitle = "I love you :D",
-   LoadingSubtitle = "by azurion",
+   LoadingSubtitle = "by Azurion",
    Theme = "Ocean",
 
    DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+   DisableBuildWarnings = false,
 
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
+      FolderName = nil,
       FileName = "Big Hub"
    },
 
    Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+      Enabled = false,
+      Invite = "noinvitelink",
+      RememberJoins = true
    },
 
-   KeySystem = false, -- Set this to true to use our key system
+   KeySystem = false,
    KeySettings = {
       Title = "Untitled",
       Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Note = "No method of obtaining the key is provided.",
+      FileName = "Key",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {"Hello"}
    }
 })
 ```
 
-## Create tab
-```lua
-local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
-```
-## Tab with lucide icons suport
+---
 
-You can now also use Lucide Icons with Rayfield. To do so, replace the Image Id above 4483362458 with a string value of an icon name in Lucide Icons.
+## 🗂️ Creating Tabs
+
+### Basic Tab
+```lua
+local Tab = Window:CreateTab("Tab Example", 4483362458)
+```
+
+### Tab with Lucide Icon
+You can use Lucide Icons instead of image IDs:
 ```lua
 local Tab = Window:CreateTab("Tab Example", "rewind")
 ```
-This will set the Tab icon to a rewind symbol from Lucide Icons.
 
-All Lucide Icons Supported Lucide Icons
+> This sets the icon to the "rewind" symbol from Lucide.  
+> See the full list of supported Lucide Icons for more options.
 
-Credit to Lucide and Latte Softworks
+---
 
-## Creating a Section
+## 📑 Creating Sections and Elements
+
+### Create Section
 ```lua
 local Section = Tab:CreateSection("Section Example")
 ```
 
-## Updating a Section
+### Update Section
 ```lua
-Section:Set("Section Example")
+Section:Set("Updated Section Title")
 ```
 
-## Creating a Divider
+### Create Divider
 ```lua
 local Divider = Tab:CreateDivider()
 ```
 
-## Updating a Divider
+### Update Divider
 ```lua
-Divider:Set(false) -- Whether the divider's visibility is to be set to true or false.
+Divider:Set(false) -- true to show, false to hide
 ```
 
-# Destroying the Interface
+---
+
+## 🧼 Destroying the Interface
 ```lua
 Mikasafield:Destroy()
 ```
-## Themes
-```
-Theme Name - ThemeIdentifier
 
-Default - Default
-Amber Glow - AmberGlow
-Amethyst - Amethyst
-Bloom - Bloom
-Dark Blue - DarkBlue
-Green - Green
-Light - Light
-Ocean - Ocean
-Serenity - Serenity
+---
+
+## 🎨 Themes
+Available themes:
+
 ```
-# Interaction
-## Notification
+Theme Name      - Identifier
+-----------------------------
+Default         - Default
+Amber Glow      - AmberGlow
+Amethyst        - Amethyst
+Bloom           - Bloom
+Dark Blue       - DarkBlue
+Green           - Green
+Light           - Light
+Ocean           - Ocean
+Serenity        - Serenity
+```
+
+---
+
+## 🔔 Notifications
+
+### Basic Notification
 ```lua
 Rayfield:Notify({
    Title = "Notification Title",
-   Content = "Notification Content",
+   Content = "This is the notification message.",
    Duration = 6.5,
-   Image = 4483362458,
+   Image = 4483362458
 })
 ```
 
-## Lucide Icon Support
+### With Lucide Icon
 ```lua
 Rayfield:Notify({
    Title = "Notification Title",
-   Content = "Notification Content",
+   Content = "Using a Lucide icon!",
    Duration = 6.5,
-   Image = "rewind",
+   Image = "rewind"
 })
 ```
-## Creating a button
+
+---
+
+## 🔘 Creating Buttons & Toggles
+
+### Button
 ```lua
 local Button = Tab:CreateButton({
-   Name = "Button Example",
+   Name = "Click Me",
    Callback = function()
-   -- The function that takes place when the button is pressed
+      -- Action when button is clicked
    end,
 })
 ```
 
-## Update a button
+#### Update Button
 ```lua
-Button:Set("Button Example")
+Button:Set("New Button Name")
 ```
-## Create a toggle
 
+### Toggle
 ```lua
 local Toggle = Tab:CreateToggle({
-   Name = "Toggle Example",
+   Name = "Enable Feature",
    CurrentValue = false,
-   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Toggle1",
    Callback = function(Value)
-   -- The function that takes place when the toggle is pressed
-   -- The variable (Value) is a boolean on whether the toggle is true or false
+      -- true or false
    end,
 })
 ```
 
-## Update a toggle
+#### Update Toggle
 ```lua
-Toggle:Set(false)
+Toggle:Set(true)
 ```
 
-## Creating a Color Picker
+---
+
+## 🎨 Color Picker
 ```lua
 local ColorPicker = Tab:CreateColorPicker({
-    Name = "Color Picker",
+    Name = "Pick a Color",
     Color = Color3.fromRGB(255,255,255),
-    Flag = "ColorPicker1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "ColorPicker1",
     Callback = function(Value)
-        -- The function that takes place every time the color picker is moved/changed
-        -- The variable (Value) is a Color3fromRGB value based on which color is selected
+        -- Value is a Color3
     end
 })
 ```
 
-## Update a Color picker
+#### Update Color
 ```lua
-ColorPicker:Set(Color3.fromRGB(255,255,255)
+ColorPicker:Set(Color3.fromRGB(255,255,255))
 ```
 
-## Slider
+---
+
+## 🎚️ Slider
 ```lua
 local Slider = Tab:CreateSlider({
-   Name = "Slider Example",
+   Name = "Volume",
    Range = {0, 100},
    Increment = 10,
-   Suffix = "Bananas",
-   CurrentValue = 10,
-   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Suffix = "%",
+   CurrentValue = 50,
+   Flag = "Slider1",
    Callback = function(Value)
-   -- The function that takes place when the slider changes
-   -- The variable (Value) is a number which correlates to the value the slider is currently at
+      -- Value is a number
    end,
 })
 ```
 
-## Update a slider
+#### Update Slider
 ```lua
-Slider:Set(10) -- The new slider integer value
+Slider:Set(75)
 ```
 
-## TextBox
+---
+
+## ⌨️ TextBox
 ```lua
 local Input = Tab:CreateInput({
-   Name = "Input Example",
+   Name = "Enter Name",
    CurrentValue = "",
-   PlaceholderText = "Input Placeholder",
+   PlaceholderText = "Type here...",
    RemoveTextAfterFocusLost = false,
    Flag = "Input1",
    Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
+      -- Text is a string
    end,
 })
 ```
 
-## Update textbox
+#### Update Input
 ```lua
-Input:Set("New Text") -- The new input text value
+Input:Set("New Value")
 ```
 
-## Creating a Dropdown menu
+---
+
+## 🧾 Dropdown Menu
 ```lua
 local Dropdown = Tab:CreateDropdown({
-   Name = "Dropdown Example",
-   Options = {"Option 1","Option 2"},
-   CurrentOption = {"Option 1"},
+   Name = "Select Option",
+   Options = {"Option A", "Option B"},
+   CurrentOption = {"Option A"},
    MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Dropdown1",
    Callback = function(Options)
-   -- The function that takes place when the selected option is changed
-   -- The variable (Options) is a table of strings for the current selected options
+      -- Options is a table
    end,
 })
 ```
 
-## Updating a Dropdown
+### Update Dropdown
 ```lua
-Dropdown:Set({"Option 2"}) -- The new selected options
+Dropdown:Set({"Option B"})
 ```
-## Resseting
+
+### Refresh Dropdown Options
 ```lua
-Dropdown:Refresh({"Option 1", "Option 2", "Option 3"}) -- The new list of options available.
+Dropdown:Refresh({"New 1", "New 2", "New 3"})
 ```
-## Creating a keybine
+
+---
+
+## 🕹️ Keybinds
 ```lua
 local Keybind = Tab:CreateKeybind({
-   Name = "Keybind Example",
+   Name = "Quick Action",
    CurrentKeybind = "Q",
    HoldToInteract = false,
-   Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Keybind1",
    Callback = function(Keybind)
-   -- The function that takes place when the keybind is pressed
-   -- The variable (Keybind) is a boolean for whether the keybind is being held or not (HoldToInteract needs to be true)
+      -- Triggered when key is pressed
    end,
 })
 ```
 
-## Update a keybine
+### Update Keybind
 ```lua
-Keybind:Set("RightCtrl") -- Keybind (string)
+Keybind:Set("RightCtrl")
 ```
 
-# Textual elements in Rayfield
-## Creating a Label
-```lua
-local Label = Tab:CreateLabel("Label Example", 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
-```
-## Lucide Icon Support
-You can now also use Lucide Icons with Rayfield. To do so, replace the Image Id above 4483362458 with a string value of an icon name in Lucide Icons.
-```lua
-local Label = Tab:CreateLabel("Label Example", "rewind")
-```
-This will set the icon to a rewind symbol from Lucide Icons.
+---
 
-All Lucide Icons Supported Lucide Icons
+## 📝 Labels & Paragraphs
 
-Credit to Lucide and Latte Softworks
-## Updating a Label
+### Label with Icon
 ```lua
-Label:Set("Label Example", 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+local Label = Tab:CreateLabel("Status: Active", "github") -- Title, Icon
 ```
-## Creating a Paragraph
+
+### Update Label
 ```lua
-local Paragraph = Tab:CreateParagraph({Title = "Paragraph Example", Content = "Paragraph Example"})
+Label:Set("Updated Status", "rewind")
 ```
-## Updating a Paragraph
+
+### Paragraph
 ```lua
-Paragraph:Set({Title = "Paragraph Example", Content = "Paragraph Example"})
+local Paragraph = Tab:CreateParagraph({
+   Title = "About This Script",
+   Content = "MikasaFiel is a modified version of Rayfield UI by Azurion."
+})
 ```
+
+### Update Paragraph
+```lua
+Paragraph:Set({
+   Title = "New Title",
+   Content = "Updated content goes here."
+})
+```
+
+---
+
+## 🧾 Credits
+
+- **UI Base:** [Rayfield Interface Suite](https://docs.sirius.menu/rayfield)
+- **Icons:** [Lucide Icons](https://lucide.dev/)
+- **Modified by:** AzurionDev
