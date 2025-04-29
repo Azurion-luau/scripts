@@ -10,6 +10,10 @@ Unlock powerful tools, streamline your scripts, and take your in-game experience
 
 ```lua
 ```
+## 📜 Troll 
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Azurion-luau/scripts/refs/heads/main/Mikasa/troll.lua"))()
+```
 
 ---
 
