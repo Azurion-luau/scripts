@@ -5,8 +5,22 @@ Designed for **Roblox players**, Mikasa Hub brings advanced features, cleaner co
 
 Unlock powerful tools, streamline your scripts, and take your in-game experience to the next level.
 
----
 
-## 📜 Script 
+## 📜 Script
 
 ```lua
+```
+
+---
+
+## 🖥️ Interface Doc
+
+[🔗 Access the Interface Documentation](#)  
+*(Link will be updated soon)*
+
+---
+
+## 💬 Credits
+
+Created with ❤️ by the Mikasa Hub Team.  
+Originally based on *Realms Hub*, now fully reimagined.
