@@ -118,7 +118,7 @@ Serenity        - Serenity
 
 ### Basic Notification
 ```lua
-Rayfield:Notify({
+Mikasafield:Notify({
    Title = "Notification Title",
    Content = "This is the notification message.",
    Duration = 6.5,
@@ -128,7 +128,7 @@ Rayfield:Notify({
 
 ### With Lucide Icon
 ```lua
-Rayfield:Notify({
+Mikasafield:Notify({
    Title = "Notification Title",
    Content = "Using a Lucide icon!",
    Duration = 6.5,
