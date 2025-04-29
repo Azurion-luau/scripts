@@ -2,17 +2,17 @@
 
 ## Loading the Rayfield
 ```lua
-local RayfieldMod = loadstring(game:HttpGet('https://raw.githubusercontent.com/Azurion-luau/scripts/refs/heads/main/interface/gui.lua'))()
+local Mikasafield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Azurion-luau/scripts/refs/heads/main/interface/gui.lua'))()
 ```
 
 ## Creating Window
 ```lua
-local Window = RayfieldMod:CreateWindow({
-   Name = "Rayfield Example Window",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Rayfield Interface Suite",
-   LoadingSubtitle = "by Sirius",
-   Theme = "Default", -- Check https://github.com/Azurion-luau/scripts/blob/main/interface/doc.md#themes
+local Window = Mikasafield:CreateWindow({
+   Name = "Mikasa | [name here] V0.1",
+   Icon = "github",
+   LoadingTitle = "I love you :D",
+   LoadingSubtitle = "by azurion",
+   Theme = "Ocean",
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -80,7 +80,7 @@ Divider:Set(false) -- Whether the divider's visibility is to be set to true or f
 
 # Destroying the Interface
 ```lua
-RayfieldMod:Destroy()
+Mikasafield:Destroy()
 ```
 ## Themes
 ```
