@@ -10,7 +10,7 @@ local Mikasafield = loadstring(game:HttpGet("https://raw.githubusercontent.com/A
 ## 🪟 Creating a Window
 ```lua
 local Window = Mikasafield:CreateWindow({
-   Name = "Mikasa | [Your Script Name] V0.1",
+   Name = "MikasaFiel V0.1",
    Icon = "github", -- Uses a Lucide icon
    LoadingTitle = "I love you :D",
    LoadingSubtitle = "by Azurion",
