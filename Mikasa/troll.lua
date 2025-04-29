@@ -119,7 +119,7 @@ local moveConnection
 
 -- Criar o botão UI para criar/destruir o macarrão
 local createDestroyButton = Tab:CreateButton({
-    Name = "Criar/Destruir Macarrão",
+    Name = "Dick",
     Callback = function()
         -- Quando o botão for pressionado, essa função será chamada
         if macaroonInstance == nil then
@@ -138,22 +138,3 @@ local createDestroyButton = Tab:CreateButton({
     end,
 })
 
--- Criar o botão UI para mover o macarrão
-local moveButton = Tab:CreateButton({
-    Name = "Dick",
-    Callback = function()
-        if macaroonInstance then
-            if not isMoving then
-                isMoving = true
-                moveDirection = 1
-                moveConnection = game:GetService("RunService").Heartbeat:Connect(moveMacaroon)
-            else
-                isMoving = false
-                if moveConnection then
-                    moveConnection:Disconnect()
-                    moveConnection = nil
-                end
-            end
-        end
-    end
-})
