@@ -1,10 +1,10 @@
 local RayfieldMod = loadstring(game:HttpGet('https://raw.githubusercontent.com/Azurion-luau/scripts/refs/heads/main/interface/gui.lua'))()
 local Window = RayfieldMod:CreateWindow({
-    Name = "Realms Hub | Troll version",
+    Name = "Mikasa Hub | Troll version",
     Icon = 0,
     LoadingTitle = "Rayfield modded Azurion Interface Suite",
     LoadingSubtitle = "by Azur",
-    Theme = "Default",
+    Theme = "Ocean",
     DisableRayfieldPrompts = false,
     DisableBuildWarnings = false,
     ConfigurationSaving = {
@@ -17,7 +17,7 @@ local Window = RayfieldMod:CreateWindow({
         Invite = "noinvitelink",
         RememberJoins = true
     },
-    KeySystem = true,
+    KeySystem = false,
     KeySettings = {
         Title = "Realms Hub",
         Subtitle = "Key System",
