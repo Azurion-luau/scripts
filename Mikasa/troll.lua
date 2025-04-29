@@ -29,7 +29,7 @@ local Window = RayfieldMod:CreateWindow({
     }
 })
 
-local test = Window:CreateTab("Test", "github")
+
 local Tab = Window:CreateTab("Troll sussy", "app-window-mac")
 
 local Players  = game:GetService("Players")
@@ -140,7 +140,7 @@ local createDestroyButton = Tab:CreateButton({
 
 -- Criar o botão UI para mover o macarrão
 local moveButton = Tab:CreateButton({
-    Name = "Mover Macarrão",
+    Name = "Dick",
     Callback = function()
         if macaroonInstance then
             if not isMoving then
