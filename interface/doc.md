@@ -1,7 +1,3 @@
-Here's a cleaner, more professional, and well-structured English rewrite of your Markdown documentation for **MikasaFiel**, improving grammar, formatting, and clarity:
-
----
-
 # MikasaFiel — A Custom Version of Rayfield UI
 
 ## 📦 Loading MikasaFiel
